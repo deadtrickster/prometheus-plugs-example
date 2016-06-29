@@ -16,6 +16,6 @@ defmodule PrometheusPlugsExample.Mixfile do
   end
 
   defp deps do
-    [{:prometheus_plugs, "~> 0.0.2"}]
+    [{:prometheus_plugs, "~> 0.1"}]
   end
 end
