@@ -1,6 +1,6 @@
 %{"cowboy": {:hex, :cowboy, "1.0.4", "a324a8df9f2316c833a470d918aaf73ae894278b8aa6226ce7a9bf699388f878", [:rebar, :make], [{:cowlib, "~> 1.0.0", [hex: :cowlib, optional: false]}, {:ranch, "~> 1.0", [hex: :ranch, optional: false]}]},
   "cowlib": {:hex, :cowlib, "1.0.2", "9d769a1d062c9c3ac753096f868ca121e2730b9a377de23dec0f7e08b1df84ee", [:make], []},
   "plug": {:hex, :plug, "1.1.6", "8927e4028433fcb859e000b9389ee9c37c80eb28378eeeea31b0273350bf668b", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, optional: true]}]},
-  "prometheus": {:hex, :prometheus, "1.0.0", "f890ab679251801f3bb51d0013b47ffe0ca8b0df956e21d81a6917db67c69754", [:rebar3], []},
-  "prometheus_plugs": {:hex, :prometheus_plugs, "0.1.0", "5862c7912848505141b08a204dde50ca89a2859e634581c9866002f948f9ffbe", [:mix], [{:prometheus, "~> 1.0", [hex: :prometheus, optional: false]}, {:plug, "~> 1.0", [hex: :plug, optional: false]}, {:cowboy, "~> 1.0.0", [hex: :cowboy, optional: false]}]},
+  "prometheus": {:hex, :prometheus, "1.0.2", "cf0873e23c711555a422cf275b04f31c9ae18ac89b99b1ad32b849e156654e8c", [:rebar3], []},
+  "prometheus_plugs": {:hex, :prometheus_plugs, "0.3.0", "06e2836df709da486fcf4764088625998e25d6df2ccbd623c737d139d2ba4f34", [:mix], [{:prometheus, "~> 1.0", [hex: :prometheus, optional: false]}, {:plug, "~> 1.0", [hex: :plug, optional: false]}, {:cowboy, "~> 1.0.0", [hex: :cowboy, optional: false]}]},
   "ranch": {:hex, :ranch, "1.2.1", "a6fb992c10f2187b46ffd17ce398ddf8a54f691b81768f9ef5f461ea7e28c762", [:make], []}}

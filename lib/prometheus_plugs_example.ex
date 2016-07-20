@@ -1,8 +1,16 @@
 defmodule PrometheusPlugsExample do
   use Application
 
+  @prometheus_labels [:code, :method, :host, :scheme]
+
+  def prometheus_labels do
+    @prometheus_labels
+  end
+
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
+
+    Plug.PrometheusCollector.setup(labels: @prometheus_labels)
 
     children = [
       Plug.Adapters.Cowboy.child_spec(:http, Stack, [], [port: 4001])
