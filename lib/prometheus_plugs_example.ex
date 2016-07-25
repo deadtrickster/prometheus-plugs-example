@@ -11,6 +11,7 @@ defmodule PrometheusPlugsExample do
     import Supervisor.Spec, warn: false
 
     Plug.PrometheusCollector.setup(labels: @prometheus_labels)
+    Plug.PrometheusExporter.setup()
 
     children = [
       Plug.Adapters.Cowboy.child_spec(:http, Stack, [], [port: 4001])

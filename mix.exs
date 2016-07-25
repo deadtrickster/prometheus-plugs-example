@@ -3,7 +3,7 @@ defmodule PrometheusPlugsExample.Mixfile do
 
   def project do
     [app: :prometheus_plugs_example,
-     version: "0.1.0",
+     version: "0.2.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -16,6 +16,6 @@ defmodule PrometheusPlugsExample.Mixfile do
   end
 
   defp deps do
-    [{:prometheus_plugs, "~> 0.3"}]
+    [{:prometheus_plugs, "~> 0.4"}]
   end
 end
