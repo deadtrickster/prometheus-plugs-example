@@ -16,6 +16,9 @@ defmodule PrometheusPlugsExample.Mixfile do
   end
 
   defp deps do
-    [{:prometheus_plugs, "~> 0.4"}]
+    [{:prometheus_plugs, "~> 0.4"}
+     # Uncomment if you want process-level metrics
+     # ,{:prometheus_process_collector, "~> 0.1.0"}
+    ]
   end
 end
