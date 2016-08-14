@@ -1,7 +1,7 @@
 defmodule PrometheusPlugsExample do
   use Application
 
-  @prometheus_labels [:code, :method, :host, :scheme]
+  @prometheus_labels [:status_class, :method, :host, :scheme]
 
   def prometheus_labels do
     @prometheus_labels
