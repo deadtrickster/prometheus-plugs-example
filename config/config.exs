@@ -22,10 +22,14 @@ use Mix.Config
 #
 
 config :prometheus, PlugsInstrumenter,
-  labels: [:status_class, :method, :host, :scheme],
-  duration_buckets:[10, 100, 1_000, 10_000, 100_000,
-                    300_000, 500_000, 750_000, 1_000_000,
-                    1_500_000, 2_000_000, 3_000_000],
+  labels: [:status_class, :method, :host, :scheme, {:request_path, MyPlugLables}],
+  duration_buckets: [10, 100, 1_000, 10_000, 100_000,
+                     300_000, 500_000, 750_000, 1_000_000],
+  registry: :default
+
+config :prometheus, PlugsExporter,
+  path: "/metrics",
+  format: :text,
   registry: :default
 
 # It is also possible to import configuration files, relative to this
