@@ -21,6 +21,17 @@ use Mix.Config
 #     config :logger, level: :info
 #
 
+config :prometheus, PlugsInstrumenter,
+  labels: [:status_class, :method, :host, :scheme, {:request_path, MyPlugLables}],
+  duration_buckets: [10, 100, 1_000, 10_000, 100_000,
+                     300_000, 500_000, 750_000, 1_000_000],
+  registry: :default
+
+config :prometheus, PlugsExporter,
+  path: "/metrics",
+  format: :text,
+  registry: :default
+
 # It is also possible to import configuration files, relative to this
 # directory. For example, you can emulate configuration per environment
 # by uncommenting the line below and defining dev.exs, test.exs and such.

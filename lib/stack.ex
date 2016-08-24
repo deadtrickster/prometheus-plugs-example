@@ -1,7 +1,13 @@
 defmodule Stack do
   use Plug.Builder
 
-  plug Plug.PrometheusCollector, PrometheusPlugsExample.prometheus_labels
-  plug Plug.PrometheusExporter, []
+  plug Prometheus.PlugsInstrumenter
+  plug Prometheus.PlugsExporter
   plug HelloWorldPlug, []
+end
+
+defmodule MyPlugLables do
+  def label_value(:request_path, conn) do
+    conn.request_path
+  end
 end
